@@ -1,0 +1,17 @@
+.add-panel {
+    margin: auto;
+    max-width: 900px;
+}
+
+.view-notes {
+    margin: auto;
+    max-width: 900px;
+}
+
+.row {
+    padding: 15px;
+}
+
+.add-btn {
+    padding-top: 25px;
+}

@@ -1,0 +1,27 @@
+<article class="container">
+    <section>
+        <div class="jumbotron">
+            <div class="text-center">
+                <img src="{{profile.photo}}" alt="" class="clip-circle">
+            </div>
+            <div class="panel-identification">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input class="form-control" type="text" [(ngModel)]="profile.name" [value]="profile.name">
+                </div>
+                <div class="form-group">
+                    <label>Cargo</label>
+                    <input class="form-control" type="text" [(ngModel)]="profile.job" [value]="profile.job">
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label>Resumo</label>
+                    <textarea class="form-control" rows="10" cols="20" [(ngModel)]="profile.minibiography" [value]="profile.minibiography" maxlength="255"> </textarea>
+                </div>
+            </div>
+            <button class="btn btn-default" routerLink="/profile-view/{{id}}">Cancelar</button>
+            <button class="btn btn-primary" (click)="save()">Salvar</button>
+        </div>
+    </section>
+</article>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../../2016/zip/front-end-part2/exemplos/ex3/note" value="1470361914000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/angular2/a2-ex1/odelia-gina-angular2" value="4494038548000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/angular2/a2-ex3/linked-grails" value="2997048125000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/angular2/a2-ex4/linkedin" value="4495613914000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/angular2/a2-ex4/teste" value="4495605254000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/angular2/linked-grails" value="2990534558000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/jquery/grails/notebook" value="2994420621000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/jquery/newimob/imob" value="2998050038000" />
+        <entry key="$PROJECT_DIR$/../../../exemplos/jquery/notebook" value="2994412484000" />
+        <entry key="$PROJECT_DIR$/../a10/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a11/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a12/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a13/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a15/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a16/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a2/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a4/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a5/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a6/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a7/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a8/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../a9/linkedin" value="4500650530000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/Grails-3.1-AngularJS-master" value="1453768452000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/MyTaskAngular" value="1466368097000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/angular-todo/agenda" value="1470281427000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/angular-todo/angulargrails/agenda" value="1470481832000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/angular-todo/note" value="1470360429000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/angular-todo/todo" value="1470277970000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/myapp" value="1470271660000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/task" value="1466547829000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/todo" value="1470269578000" />
+        <entry key="$PROJECT_DIR$/../../../../../study/todoang" value="1470272378000" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" default="true" assert-keyword="true" jdk-15="true" />
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

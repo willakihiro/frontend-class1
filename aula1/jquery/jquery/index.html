@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Imob</title>
+<meta charset="UTF-8">
+<!-- CSS -->
+<link rel="stylesheet"
+	href="libs/datatable/css/jquery.dataTables.min.css">
+<link rel="stylesheet"
+	href="libs/bootstrap-3.3.7/bootswatch-flaty/boostrap.min.css">
+<link rel="stylesheet"
+	href="libs/bootstrap-3.3.7/bootswatch-flaty/custom.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- end-css -->
+
+<!-- JavaScript -->
+<script src="libs/jquery/jquery-3.2.1.min.js"></script>
+<script src="libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="libs/datatable/js/jquery.dataTables.min.js"></script>
+<!-- end-javascript -->
+</head>
+<body>
+	<header>
+		<div class="bs-component">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand header-ico" href="index.html">iMob</a>
+					</div>
+
+					<div class="collapse navbar-collapse">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="index.html">List</a></li>
+									<li><a href="#create.html" onclick="openDetails(0)" >Create</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Properties<span class="caret"></span></a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Rent<span class="caret"></span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<article>
+		<section class="board col-lg-12">
+			<ul class="breadcrumb">
+			  <li><a href="#">Contact</a></li>
+			  <li><a href="#">List</a></li>
+			</ul>
+			<header class="page-header">
+				<h1>List Contact</h1>
+			</header>
+			<div>
+				<table id="tableContact" class="display" cellspacing="0"
+					width="100%">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>First name</th>
+							<th>Last name</th>
+							<th>Address</th>
+							<th>Number</th>
+							<th>Square</th>
+							<th>City</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</section>
+	</article>
+
+	<script>
+		function openDetails(id) {
+			$(".board").load("create.html",function(data){
+				$.ajax({
+					type:"GET",
+					contentType: "application/json; charset=utf-8",
+					url: "http://localhost:8080/contacts/"+id,
+					success: function(d) {
+						$("#identifier").val(d.id);
+						$("#firstName").val(d.firstName);
+						$("#lastName").val(d.lastName);
+						$("#address").val(d.address);
+						$("#number").val(d.number);
+						$("#square").val(d.square);
+						$("#city").val(d.city);
+						$("#state").val(d.state);
+						$("#country").val(d.country);
+						if ($("#identifier").val() > 0) {
+							$(".delete-btn").show();
+						} else {
+							$(".delete-btn").hide();
+						};
+					}
+				});
+			});
+		};
+		
+		$(function(){
+			$("#tableContact").DataTable({
+				"processing": true,
+				"serverSide":true,
+				"ajax": "http://localhost:8080/contacts",
+				"columnDefs":[{
+					"targets":0,
+					"render": function(data, type, row) {
+						return "<a href='#' onclick='openDetails("+data+")'>"
+								+data+"</a>";
+					}
+				}]
+			});
+		});
+	</script>
+
+</body>
+</html>

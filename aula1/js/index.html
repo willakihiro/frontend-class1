@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS</title>
+        <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="add-panel row">
+                <div class="col-sm-3">
+                    <p>
+                        <label>Name</label>
+                        <input type="text" id="name" name="name" class="form-control">
+                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <p>
+                        <label>Date</label>
+                        <input type="date" id="date" name="date" class="form-control">
+                    </p>
+                </div>
+                <div class="col-sm-3">
+                    <p>
+                        <label>Description</label>
+                        <input type="text" id="description" name="description" class="form-control">
+                    </p>
+                </div>
+                <div class="col-sm-3 add-btn">
+                    <a href="#" class="btn btn-primary" id="addNewNote">Add</a>            
+                </div>
+            </div>
+        </div>
+        <div class="view-notes well bs-component row">
+            <div id="notes" class="col-md-12"></div>
+        </div>
+    </body>
+</html>

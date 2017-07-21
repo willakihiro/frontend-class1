@@ -1,0 +1,125 @@
+.navbar {
+    border-radius: 0px;
+}
+
+.panel {
+    border-radius: 0px;
+}
+
+.btn {
+    border-radius: 0px;
+}
+
+article > section {
+    color: #fff;
+    margin-top: 100px;
+}
+
+img {
+    width: 120px;
+}
+
+.clip-circle {
+    clip-path: circle(40px at center);
+}
+
+.img-circle-height {
+    height: 100px;
+}
+
+.username {
+    font-size: 18px;
+}
+
+.job-description {
+    font-size: 12px;
+}
+
+.icon-profile {
+    padding-top: 8px;
+    padding-left: 15px;
+    font-size: 30px;
+    padding-right: 15px;
+}
+
+.icon-profile>a, .icon-profile-vacancy>a {
+    color:#fff;
+}
+
+.fa-pencil-square-o {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.publish {
+    background-color: #4e4e4e;
+    cursor: pointer;
+}
+
+.publish.owner {
+    background-color: #cccccc;
+}
+
+.publish > a {
+    color: #fff;
+}
+
+.publish > .content {
+    padding-top: 10px;
+}
+
+.panel-identification {
+    padding-bottom: 30px;
+}
+
+.input-search {
+    height: 35px;
+    border-radius: 0px;
+    width: 300px;
+}
+
+.input-search-btn {
+    height: 36px;
+    padding-top: 5px;
+    margin-left: 3px;
+}
+
+.navbar-top {
+    margin-top: 12px;
+}
+
+.username > a {
+    color: #fff;
+}
+
+.modal-content {
+    margin-top: 150px;
+}
+
+.btn-close-btn {
+    height: 30px;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.alert-dismissable .close, .alert-dismissible .close {
+    position: relative;
+    top: -6px;
+    right: -21px;
+    color: inherit;
+}
+
+.fa-pencil-square-o {
+    padding: 0px;
+    font-size: 15px;
+}
+
+.content.intern {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rounded {
+    border-radius: 5px;
+}

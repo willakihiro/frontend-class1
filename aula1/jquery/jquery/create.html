@@ -1,0 +1,123 @@
+<ul class="breadcrumb">
+	<li><a href="#">Contact</a></li>
+	<li><a href="#">Create</a></li>
+</ul>
+<div class="well bs-component">
+	<form class="form-horizontal" id="form-contact">
+		<fieldset>
+			<legend>Create a contact</legend>
+			<input type="hidden" id="identifier" value="0">
+			<div class="form-group">
+				<label for="firstName" class="col-lg-2 control-label">First
+					name</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="firstName"
+						name="firstName" placeholder="First Name" tabindex="1">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="lastName" class="col-lg-2 control-label">Last
+					name</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="lastName"
+						placeholder="Last Name" tabindex="2">
+				</div>
+			</div>
+			<div class="form-group">
+				<div>
+					<label for="address" class="col-lg-2 control-label">Address</label>
+				</div>
+				<div class="col-lg-8">
+					<input type="text" class="form-control" id="address"
+						placeholder="Adress" tabindex="3">
+				</div>
+				<div class="col-lg-2">
+					<input type="text" class="form-control" id="number"
+						placeholder="Number" tabindex="4">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="square" class="col-lg-2 control-label">Square</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="square"
+						placeholder="Square" tabindex="5">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="city" class="col-lg-2 control-label">City</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="city"
+						placeholder="City" tabindex="6">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="state" class="col-lg-2 control-label">State</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="state"
+						placeholder="State" tabindex="7">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="inputEmail" class="col-lg-2 control-label">Country</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="country"
+						placeholder="Country" tabindex="8">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-10 col-lg-offset-2">
+					<button type="button" class="btn btn-default cancel-btn" tabindex="9">Cancel</button>
+					<button type="submit" class="btn btn-primary create-btn" tabindex="10">Submit</button>
+					<button type="button" class="btn btn-danger delete-btn" tabindex="11">Delete</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+	<div id="source-button" class="btn btn-primary btn-xs"
+		style="display: none;">&lt; &gt;</div>
+</div>
+
+<script>
+	$(function(){
+		$(".cancel-btn").on("click",function(){
+			window.location = "index.html";
+		});
+
+		$(".create-btn").on("click", function(event){
+			event.preventDefault();
+			obj = {
+				firstName: $("#firstName").val(),
+				lastName: $("#lastName").val(),
+				address: $("#address").val(),
+				number: $("#number").val(),
+				square: $("#square").val(),
+				city: $("#city").val(),
+				state: $("#state").val(),
+				country: $("#country").val()
+			};
+			if ($("#identifier").val !== 0) {
+				obj.id = $("#identifier").val();
+			};
+			$.ajax({
+				type: "POST",
+				contentType: "application/json; charset=utf-8",
+				url: "http://localhost:8080/contacts",
+				data: JSON.stringify(obj),
+				success: function() {
+					window.location = "index.html";
+				}
+			})
+		});
+
+		$(".delete-btn").on("click",function(){
+			$.ajax({
+				type: "DELETE",
+				contentType: "application/json; charset=utf-8",
+				url: "http://localhost:8080/contacts/"+$("#identifier").val(),
+				success: function() {
+					window.location = "index.html";
+				}
+			});
+		});
+	});
+</script>

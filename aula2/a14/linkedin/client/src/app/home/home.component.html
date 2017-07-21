@@ -1,0 +1,48 @@
+<ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">News</h4>
+    </div>
+    <div class="modal-body">
+        <label>Add new post</label>
+        <textarea type="text" [(ngModel)]="addNew.description" rows="10" cols="55" class="form-control" maxlength="255"></textarea>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-close-btn" (click)="c(saveNews(addNew))">Save</button>
+        <button type="button" class="btn btn-default btn-close-btn" (click)="c()">Cancel</button>
+    </div>
+</ng-template>
+
+<article class="container">
+    <section class="row">
+        <aside class="col-md-3 text-center">
+            <photo [name]="getProfile().name" [picture]="getProfile().photo" [job]="getProfile().job"></photo>
+        </aside>
+        <article class="col-md-6">
+            <div class="panel panel-default" (click)="open(content,$event)">
+                <div class="panel-body publish">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <span>Compartilhe seus artigos ou mensagem</span>
+                </div>
+            </div>
+            <div class="panel panel-default" *ngFor="let new of news; let i = index">
+                <div class="panel-body"
+                     [ngClass]="{'publish': !belongsToUser(new.belongs.id), 'owner': belongsToUser(new.belongs.id)}">
+                        <span *ngIf="!belongsToUser(new.belongs.id)"
+                              class="label label-primary">{{new.belongs.name}} / {{new.belongs.email}}</span>
+                        <span *ngIf="belongsToUser(new.belongs.id)"
+                              class="label label-success">{{new.belongs.name}} / {{new.belongs.email}}</span>
+                    <button *ngIf="belongsToUser(new.belongs.id)"
+                            type="button"
+                            class="close"
+                            (click)="deleteNew(new)"
+                            data-dismiss="alert">&times;</button>
+                    <div class="content intern">{{new.description}}</div>
+                    <a *ngIf="belongsToUser(new.belongs.id)" href="#" (click)="open(content,$event,new)" class="btn btn-success btn-xs pull-right rounded"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> edit</a>
+                </div>
+            </div>
+        </article>
+        <aside class="col-md-3">
+            <adds></adds>
+        </aside>
+    </section>
+</article>
